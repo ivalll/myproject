@@ -24,7 +24,8 @@ body {
 }
 .welcome {
 	width: 100vw;
-	height: 100vh;
+	height: auto;
+	min-height: 100vh;
 	background: rgb(36, 40, 47);
 	overflow: hidden;
 	-webkit-font-smoothing: antialiased;
@@ -35,6 +36,8 @@ body {
 }
 
 /* welcome end */
+
+
 /* character card start */
 :root {
 	--card-height: 300px;
@@ -48,6 +51,17 @@ body {
 	justify-content: space-evenly;
 	margin-top: 100px;
 
+}
+@media only screen and (max-width: 600px) {
+	.char {
+			display: grid;
+			grid-template-columns: auto;
+			grid-gap: 100px;
+			width: 100vw;
+			height: auto;
+			margin-top: 100px;
+	
+		}
 }
 
 .char .card {
